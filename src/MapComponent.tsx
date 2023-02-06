@@ -4,7 +4,6 @@ import  {Map} from "mapbox-gl";
 import {initMap} from "./utils/initMap";
 import {generateNewMarker} from "./utils/generateNewMarkers";
 
-
 const GERMANY_BOUNDS: [[number, number], [number, number]] = [
   [3, 40],
   [16, 56],
@@ -21,10 +20,9 @@ const MapComponent = ({
   useEffect(() => {
     if (mapRef.current) {
       mapInitRef.current = initMap(mapRef.current, [13.3777, 52.5163]);
-
     }
-
   }, []);
+
   useEffect(() => {
     if (mapInitRef.current) {
       fetch("https://restcountries.com/v3.1/capital/Berlin")

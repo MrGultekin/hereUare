@@ -9,5 +9,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+
+
+      function changeColor(event) {
+        const element = document.querySelector("input");
+        console.log("element",element.value);
+        // console.log(event);
+        const markers = document.querySelectorAll("svg");
+        console.log(markers);
+        for (const marker of markers) {
+          marker.children[2].style.fill = element.value;
+        }
+        console.log("markers", markers);
+
+        // console.log("WTF");
+      }
+    </script>
   </body>
 </html>
